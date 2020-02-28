@@ -8,10 +8,14 @@ import { model, Schema, Document } from "mongoose";
 import bcrypt from "bcrypt";
 
 // Defino y exporto una Interface de Typescript para tener 
-// el autocompletado y saber que datos necesito
-// cuando lo defino debo extenderlo del modulo extends Document para que 
-// Herede las propiedades de Document y
-// le agrego las 2 que defino email y password
+// el autocompletado y saber que datos necesito y puedo usar
+// cuando lo defino debo extenderlo del modulo extends Document
+// para que Herede las propiedades y metodos del Document y
+// declaro las 2 email y password y
+// tambien declaro los metodos (function) que tiene
+// comparePassword() donde le paso una password
+// y me devuelve en base a una Promesa un Boleano
+
 export interface IUser extends Document {
   email: string;
   password: string;
